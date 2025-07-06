@@ -1,6 +1,5 @@
-/// <reference types="@types/office-js" />
-
-import Excel from 'office-js';
+// No import statement for office-js here.
+// We expect 'Excel' to be a global object provided by the Office environment and its types.
 
 export async function getWorksheetNames(): Promise<string[]> {
   try {
