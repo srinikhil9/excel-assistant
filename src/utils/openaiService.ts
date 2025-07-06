@@ -1,8 +1,16 @@
 import OpenAI from 'openai';
 
 // Initialize OpenAI client
+const apiKey = process.env.REACT_APP_OPENAI_API_KEY;
+
+if (!apiKey) {
+  console.error("OpenAI API key not found. Please set REACT_APP_OPENAI_API_KEY environment variable.");
+  // You might want to throw an error here or handle it gracefully
+  // For now, let's proceed, but OpenAI calls will fail.
+}
+
 const openai = new OpenAI({
-  apiKey: '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',
+  apiKey: apiKey, // Use the API key from environment variable
   dangerouslyAllowBrowser: true // Note: In production, this should be handled server-side
 });
 

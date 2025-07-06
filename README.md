@@ -44,6 +44,14 @@ A fully functional Excel Add-in that converts natural language questions to SQL 
 # Install dependencies
 npm install
 
+# Configure OpenAI API Key
+# 1. Create a .env file in the root of the project.
+# 2. Add your OpenAI API key to the .env file like this:
+#    REACT_APP_OPENAI_API_KEY=your_openai_api_key_here
+#    (Replace "your_openai_api_key_here" with your actual key)
+#
+#    IMPORTANT: The .env file is already in .gitignore, so it won't be committed.
+
 # Start development server
 npm start
 
